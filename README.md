@@ -1,5 +1,5 @@
 # mixin-loader
-A Webpack loader that adds [compass-mixins](https://github.com/Igosuki/compass-mixins) import directives into scss files.
+A Webpack loader that prepend [compass-mixins](https://github.com/Igosuki/compass-mixins) import directives to scss files.
 This loader act as a [preLoader](http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders) and usually worked with [sass-loader](https://github.com/jtangelder/sass-loader).
 
 ## Installation
@@ -38,7 +38,7 @@ module.exports = {
     preLoaders: [
       {
         test: /third-party\.scss$/, // target scss
-        loader: 'mixin-loader?mixins[]=border-radius,mixins[]=flexbox', // add two mixins: border-radius and flexbox 
+        loader: 'mixin-loader?mixins[]=border-radius,mixins[]=flexbox', // add two mixins: border-radius and flexbox
       },
     ],
 
