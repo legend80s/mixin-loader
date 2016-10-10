@@ -4,7 +4,7 @@
   "description": "Webpack loader that adds compass mixin import directives into scss files.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,11 @@
     "loader-utils": "^0.2.16"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^2.12.0",
     "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.1"
+    "eslint-plugin-import": "^1.8.1",
+    "mocha": "^3.1.1"
   },
   "peerDependencies": {
     "compass-mixins": "^0.12.10"
