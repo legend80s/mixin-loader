@@ -1,0 +1,42 @@
+{
+  "name": "mixin-loader",
+  "version": "1.0.0",
+  "description": "Webpack loader that adds compass mixin import directives into scss files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legend80s/mixin-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-loader",
+    "compass",
+    "mixin",
+    "import",
+    "scss",
+    "sass"
+  ],
+  "author": "legend80s",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/legend80s/mixin-loader/issues"
+  },
+  "homepage": "https://github.com/legend80s/mixin-loader#readme",
+  "dependencies": {
+    "loader-utils": "^0.2.16"
+  },
+  "devDependencies": {
+    "eslint": "^2.12.0",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.1"
+  },
+  "peerDependencies": {
+    "compass-mixins": "^0.12.10"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
