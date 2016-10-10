@@ -1,4 +1,6 @@
 # mixin-loader
+[![npm version](https://badge.fury.io/js/mixin-loader.svg)](https://badge.fury.io/js/mixin-loader)
+
 A Webpack loader that prepend [compass-mixins](https://github.com/Igosuki/compass-mixins) import directives to scss files.
 This loader act as a [preLoader](http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders) and usually worked with [sass-loader](https://github.com/jtangelder/sass-loader).
 
