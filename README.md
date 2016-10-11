@@ -6,7 +6,7 @@ This loader acts as a [Webpack preLoader](http://webpack.github.io/docs/configur
 
 ***You should check whether [sass-resources-loader](https://www.npmjs.com/package/sass-resources-loader) meets you requirements or not before using this loader.***
 
-## features
+## Features
 1. import a specific mixin or a bunch of them
 2. import `css3` as a whole
 
