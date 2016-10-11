@@ -2,7 +2,7 @@
 /* eslint-disable quote-props */
 /* eslint-disable comma-dangle */
 
-const path = '~compass-mixins/lib/compass/css3';
+const path = 'compass/css3';
 
 const mixins = {
   "animation": `@import "${path}/animation";`,
