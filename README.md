@@ -46,7 +46,7 @@ module.exports = {
       {
         test: /third-party\.scss$/, // target scss
         loader: 'mixin-loader?mixins[]=border-radius,mixins[]=flexbox', // import border-radius and flexbox
-        // loader: 'mixin-loader?mixins[]=css3', // import the whole css3 mixins
+        // loader: 'mixin-loader?mixins[]=css3', // import css3 as a whole
       },
     ],
 
