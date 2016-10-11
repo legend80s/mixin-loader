@@ -80,19 +80,19 @@ Result after preLoaders:
 
 ## FAQ
 1. Make sure you have compass-mixins installed. Try `npm install compass-mixins --save-dev`.
-  > Module build failed:
-  >
-  > .btn {
-  >
-  > ^
-  >
-  >    File to import not found or unreadable: ~compass-mixins/lib/compass/css3/border-radius
+    > Module build failed:
+    >
+    > .btn {
+    >
+    > ^
+    >
+    >    File to import not found or unreadable: ~compass-mixins/lib/compass/css3/border-radius
 
 2. Make sure includePaths of sassLoader is configured properly.
-  > Module build failed:
-  >
-  > .btn {
-  >
-  > ^
-  >
-  >    File to import not found or unreadable: compass/css3/border-radius
+    > Module build failed:
+    >
+    > .btn {
+    >
+    > ^
+    >
+    >    File to import not found or unreadable: compass/css3/border-radius
