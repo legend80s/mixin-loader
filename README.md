@@ -1,8 +1,10 @@
 # mixin-loader
 [![npm version](https://badge.fury.io/js/mixin-loader.svg)](https://badge.fury.io/js/mixin-loader)
 
-A Webpack loader that prepend [compass-mixins](https://github.com/Igosuki/compass-mixins) import directives to scss files.
-This loader act as a [preLoader](http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders) and usually worked with [sass-loader](https://github.com/jtangelder/sass-loader).
+A Webpack loader that prepends [compass-mixins](https://github.com/Igosuki/compass-mixins) import directives to scss files.
+This loader acts as a [Webpack preLoader](http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders) and usually works with [sass-loader](https://github.com/jtangelder/sass-loader).
+
+***You should check whether [sass-resources-loader](https://www.npmjs.com/package/sass-resources-loader) meets you requirements or not before using this loader.***
 
 ## Installation
 `npm install mixin-loader --save-dev`
@@ -19,7 +21,7 @@ When you require third-party scss, you may come across the problem blow
 
 The build error tells that the required file needs a mixin import directive (`@import "border-radius";`) be prepended, but you cannot modify the third-party file.
 
-To solve this problem, I create this loader to prepend any compass mixins you named to the scss file before processed by sass-loader
+To solve this problem, I create this loader to prepend any compass mixins you want to the scss file before processed by sass-loader
 
 ## Usage
 
@@ -64,3 +66,15 @@ Result after preLoaders:
   @include border-radius(1px, 1px);
 }
 ```
+
+## FAQ
+1. **File to import not found or unreadable**.
+  > Module build failed:
+  >
+  > .btn {
+  >
+  > ^
+  >
+  >    File to import not found or unreadable: ~compass-mixins/lib/compass/css3/border-radius
+
+  Make sure you have compass-mixins installed. Try `npm install compass-mixins --save-dev`.

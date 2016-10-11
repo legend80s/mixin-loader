@@ -14,7 +14,7 @@ function getMixinByName(name) {
   const mixin = MIXINS[name];
 
   if (typeof mixin === 'undefined') {
-    console.warn(`\n[mixin-loader] WARNING: No mixin found by name \`${name}\`, ignored.`);
+    console.warn(`\n[mixin-loader] WARNING: No mixin named \`${name}\`, ignored.`);
   }
 
   return mixin || '';
