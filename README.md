@@ -37,7 +37,6 @@ Webpack config:
 
 ```javascript
 module.exports = {
-  ...
   module: {
     preLoaders: [
       {
