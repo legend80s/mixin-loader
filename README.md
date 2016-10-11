@@ -6,6 +6,10 @@ This loader acts as a [Webpack preLoader](http://webpack.github.io/docs/configur
 
 ***You should check whether [sass-resources-loader](https://www.npmjs.com/package/sass-resources-loader) meets you requirements or not before using this loader.***
 
+## features
+1. import a specific mixin or a bunch of them
+2. import `css3` as a whole
+
 ## Installation
 `npm install mixin-loader --save-dev`
 
@@ -41,7 +45,8 @@ module.exports = {
     preLoaders: [
       {
         test: /third-party\.scss$/, // target scss
-        loader: 'mixin-loader?mixins[]=border-radius,mixins[]=flexbox', // add two mixins: border-radius and flexbox
+        loader: 'mixin-loader?mixins[]=border-radius,mixins[]=flexbox', // import border-radius and flexbox
+        // loader: 'mixin-loader?mixins[]=css3', // import the whole css3 mixins
       },
     ],
 
