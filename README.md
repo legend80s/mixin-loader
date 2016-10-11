@@ -53,6 +53,10 @@ module.exports = {
       }
     ]
   }
+
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, './node_modules/compass-mixins/lib')],
+  },
 };
 
 ```
@@ -68,7 +72,7 @@ Result after preLoaders:
 ```
 
 ## FAQ
-1. **File to import not found or unreadable**.
+1. Make sure you have compass-mixins installed. Try `npm install compass-mixins --save-dev`.
   > Module build failed:
   >
   > .btn {
@@ -77,4 +81,11 @@ Result after preLoaders:
   >
   >    File to import not found or unreadable: ~compass-mixins/lib/compass/css3/border-radius
 
-  Make sure you have compass-mixins installed. Try `npm install compass-mixins --save-dev`.
+2. Make sure includePaths of sassLoader is configured properly.
+  > Module build failed:
+  >
+  > .btn {
+  >
+  > ^
+  >
+  >    File to import not found or unreadable: compass/css3/border-radius
