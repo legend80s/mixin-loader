@@ -2,34 +2,36 @@
 /* eslint-disable quote-props */
 /* eslint-disable comma-dangle */
 
-const path = 'compass/css3';
+const css3Path = 'compass/css3';
 
 const mixins = {
-  "animation": `@import "${path}/animation";`,
-  "appearance": `@import "${path}/appearance";`,
-  "background-clip": `@import "${path}/background-clip";`,
-  "background-origin": `@import "${path}/background-origin";`,
-  "background-size": `@import "${path}/background-size";`,
-  "border-radius": `@import "${path}/border-radius";`,
-  "box-shadow": `@import "${path}/box-shadow";`,
-  "box-sizing": `@import "${path}/box-sizing";`,
-  "box": `@import "${path}/box";`,
-  "columns": `@import "${path}/columns";`,
-  "filter": `@import "${path}/filter";`,
-  "flexbox": `@import "${path}/flexbox";`,
-  "font-face": `@import "${path}/font-face";`,
-  "hyphenation": `@import "${path}/hyphenation";`,
-  "images": `@import "${path}/images";`,
-  "inline-block": `@import "${path}/inline-block";`,
-  "opacity": `@import "${path}/opacity";`,
-  "pie": `@import "${path}/pie";`,
-  "regions": `@import "${path}/regions";`,
-  "shared": `@import "${path}/shared";`,
-  "text-shadow": `@import "${path}/text-shadow";`,
-  "transform-legacy": `@import "${path}/transform-legacy";`,
-  "transform": `@import "${path}/transform";`,
-  "transition": `@import "${path}/transition";`,
-  "user-interface": `@import "${path}/user-interface";`
+  css3: `@import "${css3Path}";`,
+
+  "animation": `@import "${css3Path}/animation";`,
+  "appearance": `@import "${css3Path}/appearance";`,
+  "background-clip": `@import "${css3Path}/background-clip";`,
+  "background-origin": `@import "${css3Path}/background-origin";`,
+  "background-size": `@import "${css3Path}/background-size";`,
+  "border-radius": `@import "${css3Path}/border-radius";`,
+  "box-shadow": `@import "${css3Path}/box-shadow";`,
+  "box-sizing": `@import "${css3Path}/box-sizing";`,
+  "box": `@import "${css3Path}/box";`,
+  "columns": `@import "${css3Path}/columns";`,
+  "filter": `@import "${css3Path}/filter";`,
+  "flexbox": `@import "${css3Path}/flexbox";`,
+  "font-face": `@import "${css3Path}/font-face";`,
+  "hyphenation": `@import "${css3Path}/hyphenation";`,
+  "images": `@import "${css3Path}/images";`,
+  "inline-block": `@import "${css3Path}/inline-block";`,
+  "opacity": `@import "${css3Path}/opacity";`,
+  "pie": `@import "${css3Path}/pie";`,
+  "regions": `@import "${css3Path}/regions";`,
+  "shared": `@import "${css3Path}/shared";`,
+  "text-shadow": `@import "${css3Path}/text-shadow";`,
+  "transform-legacy": `@import "${css3Path}/transform-legacy";`,
+  "transform": `@import "${css3Path}/transform";`,
+  "transition": `@import "${css3Path}/transition";`,
+  "user-interface": `@import "${css3Path}/user-interface";`
 };
 
 module.exports = mixins;
