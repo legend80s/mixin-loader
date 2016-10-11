@@ -13,6 +13,9 @@ This loader acts as a [Webpack preLoader](http://webpack.github.io/docs/configur
 ## Installation
 `npm install mixin-loader --save-dev`
 
+## Demo
+[mixin-loader demo](https://github.com/legend80s/mixin-loader-demo)
+
 ## Why yet Another Loader?
 When you require third-party scss, you may come across the problem blow
 
