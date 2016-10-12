@@ -47,7 +47,6 @@ module.exports = {
         loader: 'mixin-loader',
       },
     ],
-
     loaders: [
       {
         test: /\.scss$/, // sent to sass-loader
@@ -55,7 +54,6 @@ module.exports = {
       }
     ]
   }
-
   sassLoader: {
     includePaths: [path.resolve(__dirname, './node_modules/compass-mixins/lib')],
   },
