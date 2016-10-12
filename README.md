@@ -6,10 +6,6 @@ This loader acts as a [Webpack preLoader](http://webpack.github.io/docs/configur
 
 ***You should check whether [sass-resources-loader](https://www.npmjs.com/package/sass-resources-loader) meets you requirements or not before using this loader.***
 
-## Features
-1. import a specific mixin or a bunch of them
-2. import `css3` as a whole
-
 ## Installation
 `npm install mixin-loader --save-dev`
 
@@ -30,8 +26,10 @@ The build error tells that the required file needs a mixin import directive (`@i
 
 To solve this problem, I create this loader to prepend any compass mixins you want to the scss file before processed by sass-loader
 
-## Usage
+## How it works
+This loader prepends either `@import "compass";` or `@import "~compass-mixins/lib/compass";` to your scss file.
 
+## Usage
 Source file:
 
 ```css
@@ -48,8 +46,7 @@ module.exports = {
     preLoaders: [
       {
         test: /third-party\.scss$/, // target scss
-        loader: 'mixin-loader?mixins[]=border-radius,mixins[]=flexbox', // import border-radius and flexbox
-        // loader: 'mixin-loader?mixins[]=css3', // import css3 as a whole
+        loader: 'mixin-loader',
       },
     ],
 
@@ -71,8 +68,15 @@ module.exports = {
 Result after preLoaders:
 
 ```css
-@import "~compass-mixins/lib/compass/css3/border-radius";
-@import "~compass-mixins/lib/compass/css3/flexbox";
+@import "compass";
+.btn {
+  @include border-radius(1px, 1px);
+}
+```
+
+If you don't have includePaths configured, the result will be:
+```css
+@import "~compass-mixins/lib/compass";
 .btn {
   @include border-radius(1px, 1px);
 }
@@ -86,7 +90,7 @@ Result after preLoaders:
     >
     > ^
     >
-    >    File to import not found or unreadable: ~compass-mixins/lib/compass/css3/border-radius
+    >    File to import not found or unreadable: ~compass-mixins/lib/compass
 
 2. Make sure includePaths of sassLoader is configured properly.
     > Module build failed:
@@ -95,4 +99,4 @@ Result after preLoaders:
     >
     > ^
     >
-    >    File to import not found or unreadable: compass/css3/border-radius
+    >    File to import not found or unreadable: compass
