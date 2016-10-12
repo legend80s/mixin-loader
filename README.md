@@ -4,8 +4,6 @@
 A Webpack loader that prepends [compass-mixins](https://github.com/Igosuki/compass-mixins) import directives to scss files.
 This loader acts as a [Webpack preLoader](http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders) and usually works with [sass-loader](https://github.com/jtangelder/sass-loader).
 
-***You should check whether [sass-resources-loader](https://www.npmjs.com/package/sass-resources-loader) meets you requirements or not before using this loader.***
-
 ## Installation
 `npm install mixin-loader --save-dev`
 
@@ -74,7 +72,7 @@ Result after preLoaders:
 }
 ```
 
-If you don't have includePaths configured, the result will be:
+If you don't have `includePaths` configured, the result will be:
 ```css
 @import "~compass-mixins/lib/compass";
 .btn {
