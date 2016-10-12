@@ -25,7 +25,7 @@ module.exports = function addMixin(source) {
 
   const { mixins } = parseQuery(this.query);
 
-  if (!mixins || !Array.isArray(mixins)) {
+  if (!Array.isArray(mixins)) {
     return source;
   }
 
