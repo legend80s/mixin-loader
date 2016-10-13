@@ -55,6 +55,7 @@ module.exports = {
     ]
   }
   sassLoader: {
+    // `includePaths` is optional
     includePaths: [path.resolve(__dirname, './node_modules/compass-mixins/lib')],
   },
 };
@@ -79,7 +80,7 @@ If you don't have `includePaths` configured, the result will be:
 ```
 
 ## FAQ
-1. Make sure you have compass-mixins installed. Try `npm install compass-mixins --save-dev`.
+1. Make sure you have **compass-mixins** installed. If not try `npm install compass-mixins --save-dev`.
     > Module build failed:
     >
     > .btn {
@@ -88,7 +89,7 @@ If you don't have `includePaths` configured, the result will be:
     >
     >    File to import not found or unreadable: ~compass-mixins/lib/compass
 
-2. Make sure includePaths of sassLoader is configured properly.
+2. If your have `includePaths` configured, make sure it's configured properly.
     > Module build failed:
     >
     > .btn {
