@@ -17,7 +17,7 @@ const source = `
 `;
 
 describe('mixin-loader', () => {
-  it('should work when has includePaths and query is not empty', () => {
+  it('should work when there is includePaths and query is not empty', () => {
     const query = '?mixins[]=border-radius';
     const result = mixinLoader.call(Object.assign({ query, options }, context), source);
     const expected = `@import "compass";\n${source}`;
@@ -25,7 +25,7 @@ describe('mixin-loader', () => {
     expect(result).to.equal(expected);
   });
 
-  it('should work when has includePaths and query empty', () => {
+  it('should work when there is includePaths and query empty', () => {
     const query = '';
     const result = mixinLoader.call(Object.assign({ query, options }, context), source);
     const expected = `@import "compass";\n${source}`;
@@ -33,14 +33,14 @@ describe('mixin-loader', () => {
     expect(result).to.equal(expected);
   });
 
-  it('should work when has no sassLoader', () => {
+  it('should work when there is no sassLoader', () => {
     const result = mixinLoader.call(Object.assign({ options: {} }, context), source);
     const expected = `@import "~compass-mixins/lib/compass";\n${source}`;
 
     expect(result).to.equal(expected);
   });
 
-  it('should work when has has sassLoader but not includePaths', () => {
+  it('should work when there is sassLoader but not includePaths', () => {
     const result = mixinLoader.call(Object.assign({ options: { sassLoader: {} } }, context), source);
     const expected = `@import "~compass-mixins/lib/compass";\n${source}`;
 
