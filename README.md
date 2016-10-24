@@ -11,7 +11,7 @@ This loader acts as a [Webpack preLoader](http://webpack.github.io/docs/configur
 [mixin-loader demo](https://github.com/legend80s/mixin-loader-demo)
 
 ## Why yet Another Loader?
-When you require third-party scss, you may come across the problem blow
+When you require third-party scss, you may come across the problem below:
 
 > modulesModuleBuildError: Module build failed:
 >
@@ -20,9 +20,9 @@ When you require third-party scss, you may come across the problem blow
 >    ^
 >  No mixin named border-radius
 
-The build error tells that the required file needs a mixin import directive (`@import "border-radius";`) be prepended, but you cannot modify the third-party file.
+The build error tells that the required file needs a mixin import directive (`@import "border-radius";`) to be prepended, but you cannot modify the third-party file.
 
-To solve this problem, I create this loader to prepend any compass mixins you want to the scss file before processed by sass-loader
+To solve this, I create this loader to prepend compass mixins to the target files before processed by sass-loader.
 
 ## How it works
 This loader prepends either `@import "compass";` or `@import "~compass-mixins/lib/compass";` to your scss file.
