@@ -1,6 +1,6 @@
 {
   "name": "mixin-loader",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Webpack loader that adds compass mixin import directives into scss files.",
   "main": "index.js",
   "scripts": {
